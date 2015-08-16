@@ -112,25 +112,27 @@
 - (IBAction)onDone:(UIButton *)sender {
     NSArray *indexPathes = [self.collectionView indexPathsForSelectedItems];
     NSMutableArray *images = [[NSMutableArray alloc] initWithCapacity:indexPathes.count];
+    UIImage *originImage;
     for (NSIndexPath *indexPath in indexPathes) {
         LLPhotoModel *model = _photosStore.photos[indexPath.row];
-        UIImage *image = [[UIImage imageWithALAsset:model.rep] scaleToSize:CGSizeMake(640, 1280)];
+        UIImage *image = [UIImage imageWithALAsset:model.rep];
         [images addObject:image];
+        originImage = image;
     }
     
-    UIImage *image;
+    UIImage *filterImage;
     if (self.filterImageBlock) {
         if (self.imageCountOfFilter <= images.count) {
-            image = self.filterImageBlock(images);
+            filterImage = self.filterImageBlock(images);
         }
     } else if (self.photoFilter) {
         if ([self.photoFilter imageCountOfFilter] <= images.count) {
-            image = [self.photoFilter filterImage:images];
+            filterImage = [self.photoFilter filterImage:images];
         }
     }
     
-    if (image) {
-        LLPhotoViewController *viewController = [[LLPhotoViewController alloc] initWithImage:image];
+    if (filterImage) {
+        LLPhotoViewController *viewController = [[LLPhotoViewController alloc] initWithFilterImage:filterImage andOriginImage:originImage];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

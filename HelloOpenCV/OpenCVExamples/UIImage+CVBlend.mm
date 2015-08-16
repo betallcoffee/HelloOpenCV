@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Tina. All rights reserved.
 // http://docs.opencv.org/doc/tutorials/core/adding_images/adding_images.html#adding-images
 
+#import "UIImage+Util.h"
 #import "UIImage+CVBlend.h"
 #import "UIImage+CVMat.h"
+
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
@@ -20,7 +22,9 @@
 + (FilterImageBlock)blendImageBlock {
     return [^UIImage* (NSArray *images) {
         if (images.count > 1) {
-            return [UIImage imageBlendImage:images[0] andImage:images[1] withBeta:0.5];
+            return [UIImage imageBlendImage:[images[0] scaleToSize:CGSizeMake(640, 1280)]
+                                   andImage:[images[1] scaleToSize:CGSizeMake(640, 1280)]
+                                   withBeta:0.5];
         } else {
             return nil;
         }
@@ -47,14 +51,6 @@
     // dst = src1*alpha + src2*beta + gamma;
     cv::addWeighted(cvMat1, alpha, cvMat2, beta, 0.0, dst);
     return [UIImage imageWithCVMat:dst];
-}
-
-- (UIImage *)blendedImage:(UIImage *)image withBeta:(float)beta {
-    return image;
-}
-
-- (void)blendWithImage:(UIImage *)image withBeta:(float)beta {
-    
 }
 
 @end

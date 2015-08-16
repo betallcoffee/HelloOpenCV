@@ -11,9 +11,10 @@
 #import "wote.h"
 
 #import "LLViewController.h"
-#import "LLConvolvesImage.h"
+#import "UIImage+Util.h"
 #import "UIImage+CVMat.h"
 #import "UIImage+CVBlend.h"
+#import "UIImage+Convolves.h"
 
 #import "LLPhotosViewController.h"
 
@@ -98,21 +99,27 @@
 
 - (NSArray *)titles {
     if (_titles == nil) {
-        _titles = @[@"CVBlend"];
+        _titles = @[@"CVBlend",
+                    @"ContrastEnhancement",
+                    @"Filter2D"];
     }
     return _titles;
 }
 
 - (NSArray *)filters {
     if (_filters == nil) {
-        _filters = @[[UIImage blendImageBlock]];
+        _filters = @[[[UIImage blendImageBlock] copy],
+                     [[UIImage contrastEnhancementImageBlock] copy],
+                     [[UIImage filter2DImageBlock] copy]];
     }
     return _filters;
 }
 
 - (NSArray *)imageCounts {
     if (_imageCounts == nil) {
-        _imageCounts = @[[UIImage blendImageCount]];
+        _imageCounts = @[[UIImage blendImageCount],
+                         [UIImage contrastEnhascementImageCount],
+                         [UIImage filter2DImageCount]];
     }
     return _imageCounts;
 }

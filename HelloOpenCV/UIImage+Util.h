@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class  ALAssetRepresentation;
+
 @interface UIImage (Util)
 
 + (UIImage *)imageWithALAsset:(ALAssetRepresentation *)rep;

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC33C9671B2C3C82003A3FEE /* LLVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC33C9661B2C3C81003A3FEE /* LLVideoCameraViewController.m */; };
 		EC33C96A1B2C7456003A3FEE /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = EC33C9691B2C7456003A3FEE /* UIImage+Util.m */; };
-		EC60CA0B1A67DF8800FAE7DC /* LLConvolvesImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC60CA0A1A67DF8800FAE7DC /* LLConvolvesImage.mm */; };
+		EC60CA0B1A67DF8800FAE7DC /* UIImage+Convolves.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC60CA0A1A67DF8800FAE7DC /* UIImage+Convolves.mm */; };
 		EC6B5ED31A3FE0410051AEBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5ED21A3FE0410051AEBC /* Foundation.framework */; };
 		EC6B5ED51A3FE0410051AEBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5ED41A3FE0410051AEBC /* CoreGraphics.framework */; };
 		EC6B5ED71A3FE0410051AEBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5ED61A3FE0410051AEBC /* UIKit.framework */; };
@@ -63,8 +63,8 @@
 		EC33C9661B2C3C81003A3FEE /* LLVideoCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLVideoCameraViewController.m; sourceTree = "<group>"; };
 		EC33C9681B2C7456003A3FEE /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Util.h"; path = "HelloOpenCV/UIImage+Util.h"; sourceTree = SOURCE_ROOT; };
 		EC33C9691B2C7456003A3FEE /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Util.m"; path = "HelloOpenCV/UIImage+Util.m"; sourceTree = SOURCE_ROOT; };
-		EC60CA091A67DF8800FAE7DC /* LLConvolvesImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLConvolvesImage.h; sourceTree = "<group>"; };
-		EC60CA0A1A67DF8800FAE7DC /* LLConvolvesImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LLConvolvesImage.mm; sourceTree = "<group>"; };
+		EC60CA091A67DF8800FAE7DC /* UIImage+Convolves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convolves.h"; sourceTree = "<group>"; };
+		EC60CA0A1A67DF8800FAE7DC /* UIImage+Convolves.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+Convolves.mm"; sourceTree = "<group>"; };
 		EC6B5ECF1A3FE0410051AEBC /* HelloOpenCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloOpenCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6B5ED21A3FE0410051AEBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC6B5ED41A3FE0410051AEBC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,8 +158,8 @@
 			children = (
 				ECE61B851A68FD8B0025ADAF /* UIImage+CVMat.h */,
 				ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */,
-				EC60CA091A67DF8800FAE7DC /* LLConvolvesImage.h */,
-				EC60CA0A1A67DF8800FAE7DC /* LLConvolvesImage.mm */,
+				EC60CA091A67DF8800FAE7DC /* UIImage+Convolves.h */,
+				EC60CA0A1A67DF8800FAE7DC /* UIImage+Convolves.mm */,
 				ECE61B881A68FDA50025ADAF /* UIImage+CVBlend.h */,
 				ECE61B891A68FDA50025ADAF /* UIImage+CVBlend.mm */,
 				EC33C9681B2C7456003A3FEE /* UIImage+Util.h */,
@@ -417,7 +417,7 @@
 				ECD4DF071B496CDB00F82124 /* LLPhotoModel.m in Sources */,
 				EC6B5EE31A3FE0410051AEBC /* LLAppDelegate.m in Sources */,
 				EC6B5F371A4012BA0051AEBC /* utils.c in Sources */,
-				EC60CA0B1A67DF8800FAE7DC /* LLConvolvesImage.mm in Sources */,
+				EC60CA0B1A67DF8800FAE7DC /* UIImage+Convolves.mm in Sources */,
 				EC33C96A1B2C7456003A3FEE /* UIImage+Util.m in Sources */,
 				ECD4DF091B496CDB00F82124 /* LLPhotosViewController.m in Sources */,
 				EC6B5EDF1A3FE0410051AEBC /* main.m in Sources */,

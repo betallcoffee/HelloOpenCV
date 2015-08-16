@@ -10,6 +10,6 @@
 
 @interface LLPhotoViewController : UIViewController
 
-- (instancetype)initWithImage:(UIImage *)image;
+- (instancetype)initWithFilterImage:(UIImage *)filterImage andOriginImage:(UIImage *)originImage;
 
 @end

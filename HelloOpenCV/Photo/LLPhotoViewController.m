@@ -10,19 +10,23 @@
 
 @interface LLPhotoViewController ()
 {
-    UIImage *_image;
-    UIImageView *_imageView;
+    UIImage *_filterImage;
+    UIImageView *_filterImageView;
+    
+    UIImage *_originImage;
+    UIImageView *_originImageView;
 }
 
 @end
 
 @implementation LLPhotoViewController
 
-- (instancetype)initWithImage:(UIImage *)image
+- (instancetype)initWithFilterImage:(UIImage *)filterImage andOriginImage:(UIImage *)originImage
 {
     self = [super init];
     if (self) {
-        _image = image;
+        _filterImage = filterImage;
+        _originImage = originImage;
     }
     return self;
 }
@@ -31,9 +35,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _imageView = [[UIImageView alloc] initWithImage:_image];
-    _imageView.frame = self.view.bounds;
-    [self.view addSubview:_imageView];
+    
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = (self.view.frame.size.height  - 64) / 2;
+    
+    _filterImageView = [[UIImageView alloc] initWithImage:_filterImage];
+    _filterImageView.frame = CGRectMake(0, 64, width, height);
+    [self.view addSubview:_filterImageView];
+    
+    _originImageView = [[UIImageView alloc] initWithImage:_originImage];
+    _originImageView.frame = CGRectMake(0, height+64, width, height);
+    [self.view addSubview:_originImageView];
 }
 
 - (void)didReceiveMemoryWarning

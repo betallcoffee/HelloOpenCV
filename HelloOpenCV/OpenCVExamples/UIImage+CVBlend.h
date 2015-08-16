@@ -21,14 +21,4 @@
  */
 + (UIImage *)imageBlend:(NSString *)imageName1 andImage:(NSString *)imageName2 withBeta:(float)beta;
 
-/**
- @brief blend self*(1-beta) with image*beta, and return the result.
- */
-- (UIImage *)blendedImage:(UIImage *)image withBeta:(float)beta;
-
-/**
- @brief blend self*(1-beta) with image*beta, and restore to self.
- */
-- (void)blendWithImage:(UIImage *)image withBeta:(float)beta;
-
 @end

@@ -1,5 +1,5 @@
 //
-//  LLConvolvesImage.m
+//  UIImage+Convolves.m
 //  HelloOpenCV
 //
 //  Created by liang on 1/15/15.
@@ -7,15 +7,29 @@
 // http://docs.opencv.org/doc/tutorials/core/mat-mask-operations/mat-mask-operations.html#maskoperationsfilter
 
 #include <opencv2/imgproc/imgproc.hpp>
-#import "LLConvolvesImage.h"
+#import "UIImage+Convolves.h"
 #import "UIImage+CVMat.h"
 
-@implementation LLConvolvesImage
+@implementation UIImage (Convolves)
+
++ (NSNumber *)contrastEnhascementImageCount {
+    return @(1);
+}
+
++ (FilterImageBlock)contrastEnhancementImageBlock {
+    return [^UIImage* (NSArray *images) {
+        if (images.count > 0) {
+            return [UIImage contrastEnhancementWithImage:images[0]];
+        } else {
+            return nil;
+        }
+    } copy];
+}
 
 + (UIImage *)contrastEnhancementWithImage:(UIImage *)image
 {
     cv::Mat cvMat = [image CVMatFromImage];
-    [LLConvolvesImage contrastEnhancement:cvMat];
+    [UIImage contrastEnhancement:cvMat];
     return [UIImage imageWithCVMat:cvMat];
 }
 
@@ -39,6 +53,26 @@
     imageMask.row(imageMask.rows - 1).setTo(cv::Scalar(0));
     imageMask.col(0).setTo(cv::Scalar(0));
     imageMask.col(imageMask.cols - 1).setTo(cv::Scalar(0));
+}
+
++(NSNumber *)filter2DImageCount {
+    return @(1);
+}
+
++ (FilterImageBlock)filter2DImageBlock {
+    return [^UIImage* (NSArray *images) {
+        if (images.count > 0) {
+            return [UIImage filter2DWithImage:images[0]];
+        } else {
+            return nil;
+        }
+    } copy];
+}
+
++ (UIImage *)filter2DWithImage:(UIImage *)image {
+    cv::Mat cvMat = [image CVMatFromImage];
+    [UIImage filter2D:cvMat];
+    return [UIImage imageWithCVMat:cvMat];
 }
 
 + (void)filter2D:(cv::Mat &)image {
