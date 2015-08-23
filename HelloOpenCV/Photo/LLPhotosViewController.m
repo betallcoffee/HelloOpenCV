@@ -54,7 +54,9 @@
     [self.view addSubview:self.collectionView];
     
     [self.photosStore fetchPhotosComplete:^(LLPhotosStore *photosStore) {
-        [self.collectionView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
     }];
 }
 
@@ -115,7 +117,7 @@
     UIImage *originImage;
     for (NSIndexPath *indexPath in indexPathes) {
         LLPhotoModel *model = _photosStore.photos[indexPath.row];
-        UIImage *image = [UIImage imageWithALAsset:model.rep];
+        UIImage *image = [UIImage imageWithALAsset:model.asset];
         [images addObject:image];
         originImage = image;
     }

@@ -11,11 +11,8 @@
 #import "LLPhotoModel.h"
 #import "UIImage+Util.h"
 
-static dispatch_queue_t imageQueue;
-
 @interface LLPhotoCell ()
 
-@property (nonatomic, strong) LLPhotoModel *model;
 @property (nonatomic, strong) UIImageView *imageView;
 
 @end
@@ -41,25 +38,9 @@ static dispatch_queue_t imageQueue;
 
 - (void)configCell:(LLPhotoModel *)model
 {
-    if (!imageQueue) {
-        imageQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
-    }
-    self.model = model;
     [self.contentView addSubview:self.imageView];
-    
-    __weak typeof(&*self) weakSelf = self;
-    dispatch_async(imageQueue, ^{
-        CGImageRef imageRef = [weakSelf.model.rep fullScreenImage];
-        if (imageRef) {
-            [[UIImage imageWithCGImage:imageRef] asycScaleToSize:[LLPhotoCell size]
-                                                 onDispatchQueue:imageQueue
-                                                        complete:^(UIImage *image) {
-                                                            weakSelf.imageView.image = image;
-                                                            [weakSelf setNeedsDisplay];
-                                                        }];
-        }
-
-    });
+    self.imageView.frame = CGRectMake(0, 0, [LLPhotoCell size].width, [LLPhotoCell size].height);
+    self.imageView.image = [UIImage thumbImageWithALAsset:model.asset];
 }
 
 #pragma mark getter/setter

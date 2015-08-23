@@ -11,6 +11,6 @@
 
 @interface LLPhotoModel : NSObject
 
-@property (nonatomic, strong) ALAssetRepresentation *rep;
+@property (nonatomic, strong) ALAsset *asset;
 
 @end

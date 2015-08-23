@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class  ALAssetRepresentation;
+@class ALAsset;
+@class ALAssetRepresentation;
 
 @interface UIImage (Util)
 
-+ (UIImage *)imageWithALAsset:(ALAssetRepresentation *)rep;
++ (UIImage *)imageWithALAsset:(ALAsset *)asset;
+
++ (UIImage *)thumbImageWithALAsset:(ALAsset *)asset;
+
++ (UIImage *)thumbImageWithURL:(NSURL *)url maxPixelSize:(CGFloat)maxPixelSize;
 
 - (UIImage *)scaleToSize:(CGSize)size;
-
-- (void)asycScaleToSize:(CGSize)size onDispatchQueue:(dispatch_queue_t)queue complete:(void (^)(UIImage *image))completeBlock;
 
 @end

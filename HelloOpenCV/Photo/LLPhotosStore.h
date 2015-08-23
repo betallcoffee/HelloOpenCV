@@ -11,6 +11,7 @@
 @interface LLPhotosStore : NSObject
 
 @property (nonatomic, readonly) NSMutableArray *photos;
+@property (nonatomic, readonly) NSCache *thumbCache;
 
 - (void)fetchPhotosComplete:(void (^)(LLPhotosStore *photosStore))completeBlock;
 

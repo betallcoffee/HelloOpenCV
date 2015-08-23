@@ -7,14 +7,47 @@
 //
 
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <ImageIO/ImageIO.h>
 #import "UIImage+Util.h"
 
 @implementation UIImage (Util)
 
-+ (UIImage *)imageWithALAsset:(ALAssetRepresentation *)rep
++ (UIImage *)imageWithALAsset:(ALAsset *)asset
 {
-    CGImageRef imageRef = [rep fullScreenImage];
+    CGImageRef imageRef = [asset.defaultRepresentation fullScreenImage];
     return [UIImage imageWithCGImage:imageRef];
+}
+
++ (UIImage *)thumbImageWithALAsset:(ALAsset *)asset {
+    return [UIImage imageWithCGImage:asset.thumbnail];
+}
+
++ (UIImage *)thumbImageWithURL:(NSURL *)url maxPixelSize:(CGFloat)maxPixelSize {
+    // Create the image source (from path)
+    CGImageSourceRef src = CGImageSourceCreateWithURL((__bridge_retained CFURLRef)url, NULL);
+    
+    // To create image source from UIImage, use this
+//    NSData* pngData =  UIImagePNGRepresentation();
+//    if (pngData == nil) {
+//        return nil;
+//    }
+//    CGImageSourceRef src = CGImageSourceCreateWithData((CFDataRef)pngData, NULL);
+    
+    
+    // Create thumbnail options
+    CFDictionaryRef options = (__bridge_retained CFDictionaryRef) @{
+                                                           (id) kCGImageSourceCreateThumbnailWithTransform : @YES,
+                                                           (id) kCGImageSourceCreateThumbnailFromImageAlways : @YES,
+                                                           (id) kCGImageSourceThumbnailMaxPixelSize : @(maxPixelSize)
+                                                           };
+    
+    // Generate the thumbnail
+    CGImageRef thumbnail = CGImageSourceCreateThumbnailAtIndex(src, 0, options);
+    CFRelease(src);
+    
+    UIImage *image = [[UIImage alloc] initWithCGImage:thumbnail];
+    CFRelease(thumbnail);
+    return image;
 }
 
 - (UIImage *)scaleToSize:(CGSize)size
@@ -24,22 +57,6 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
-}
-
-- (void)asycScaleToSize:(CGSize)size onDispatchQueue:(dispatch_queue_t)queue complete:(void (^)(UIImage *))completeBlock
-{
-    if (!queue) {
-        queue = dispatch_get_main_queue();
-    }
-    __weak typeof(&*self) weakSelf = self;
-    dispatch_async(queue, ^{
-        UIImage *image = [weakSelf scaleToSize:size];
-        if (completeBlock) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completeBlock(image);
-            });
-        }
-    });
 }
 
 @end
