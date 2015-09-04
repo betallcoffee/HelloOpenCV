@@ -35,6 +35,7 @@
 		EC6B5F381A4012BA0051AEBC /* xform.c in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5F311A4012BA0051AEBC /* xform.c */; };
 		EC6B5F3E1A4031060051AEBC /* OpenSift.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5F3D1A4031060051AEBC /* OpenSift.m */; };
 		EC6B5F461A41725A0051AEBC /* wote.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5F441A41725A0051AEBC /* wote.cpp */; };
+		ECC1269A1B8A00CE00FC1218 /* LLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC126991B8A00CE00FC1218 /* LLNavigationBar.m */; };
 		ECD4DF061B496CDB00F82124 /* LLPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD4DEFF1B496CDB00F82124 /* LLPhotoCell.m */; };
 		ECD4DF071B496CDB00F82124 /* LLPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD4DF011B496CDB00F82124 /* LLPhotoModel.m */; };
 		ECD4DF081B496CDB00F82124 /* LLPhotosStore.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD4DF031B496CDB00F82124 /* LLPhotosStore.m */; };
@@ -104,6 +105,8 @@
 		EC6B5F3D1A4031060051AEBC /* OpenSift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSift.m; sourceTree = "<group>"; };
 		EC6B5F441A41725A0051AEBC /* wote.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wote.cpp; sourceTree = "<group>"; };
 		EC6B5F451A41725A0051AEBC /* wote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wote.h; sourceTree = "<group>"; };
+		ECC126981B8A00CE00FC1218 /* LLNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLNavigationBar.h; sourceTree = "<group>"; };
+		ECC126991B8A00CE00FC1218 /* LLNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLNavigationBar.m; sourceTree = "<group>"; };
 		ECD4DEFE1B496CDB00F82124 /* LLPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPhotoCell.h; sourceTree = "<group>"; };
 		ECD4DEFF1B496CDB00F82124 /* LLPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPhotoCell.m; sourceTree = "<group>"; };
 		ECD4DF001B496CDB00F82124 /* LLPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPhotoModel.h; sourceTree = "<group>"; };
@@ -206,6 +209,7 @@
 		EC6B5ED81A3FE0410051AEBC /* HelloOpenCV */ = {
 			isa = PBXGroup;
 			children = (
+				ECC126961B8A00A400FC1218 /* Framework */,
 				ECD4DEFD1B496CDB00F82124 /* Photo */,
 				ECE61B7D1A68B56F0025ADAF /* Resources */,
 				EC60CA061A67D5D200FAE7DC /* OpenCVExamples */,
@@ -280,6 +284,23 @@
 				EC6B5F451A41725A0051AEBC /* wote.h */,
 			);
 			path = openfingerprint;
+			sourceTree = "<group>";
+		};
+		ECC126961B8A00A400FC1218 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				ECC126971B8A00A400FC1218 /* View */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		ECC126971B8A00A400FC1218 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECC126981B8A00CE00FC1218 /* LLNavigationBar.h */,
+				ECC126991B8A00CE00FC1218 /* LLNavigationBar.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ECD4DEFD1B496CDB00F82124 /* Photo */ = {
@@ -417,6 +438,7 @@
 				ECD4DF071B496CDB00F82124 /* LLPhotoModel.m in Sources */,
 				EC6B5EE31A3FE0410051AEBC /* LLAppDelegate.m in Sources */,
 				EC6B5F371A4012BA0051AEBC /* utils.c in Sources */,
+				ECC1269A1B8A00CE00FC1218 /* LLNavigationBar.m in Sources */,
 				EC60CA0B1A67DF8800FAE7DC /* UIImage+Convolves.mm in Sources */,
 				EC33C96A1B2C7456003A3FEE /* UIImage+Util.m in Sources */,
 				ECD4DF091B496CDB00F82124 /* LLPhotosViewController.m in Sources */,

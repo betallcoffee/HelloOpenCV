@@ -42,20 +42,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (UIImage *)filterImage:(NSString *)imageName withBlock:(cv::Mat (^)(cv::Mat &cvMat))filter{
-    UIImage *image = [UIImage imageNamed:imageName];
-    cv::Mat cvMat = [image CVMatFromImage];
-    if (filter != nil) {
-        cvMat = filter(cvMat);
-    }
-    
-    return [UIImage imageWithCVMat:cvMat];
 }
 
 #pragma mark UITableViewDelegate

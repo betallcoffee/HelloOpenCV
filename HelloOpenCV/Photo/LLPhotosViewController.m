@@ -47,6 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController.navigationBar setTranslucent:YES];
     
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onDone:)];
     self.navigationItem.rightBarButtonItem = done;
@@ -58,6 +59,10 @@
             [self.collectionView reloadData];
         });
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +79,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 
 #pragma mark UICollectionViewDataSource
 
@@ -150,7 +165,7 @@
 
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
         _collectionView.frame = self.view.bounds;
-        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.allowsMultipleSelection = YES;

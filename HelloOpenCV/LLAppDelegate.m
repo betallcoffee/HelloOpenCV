@@ -18,8 +18,8 @@
     
     LLViewController *viewController = [[LLViewController alloc] init];
     
-    UINavigationController *nvaController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.window.rootViewController = nvaController;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }
