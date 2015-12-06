@@ -8,6 +8,7 @@
 
 #import "LLAppDelegate.h"
 #import "LLViewController.h"
+#import "LLPhotosViewController.h"
 
 @implementation LLAppDelegate
 
@@ -16,7 +17,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    LLViewController *viewController = [[LLViewController alloc] init];
+    LLPhotosViewController *viewController = [[LLPhotosViewController alloc] init];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navController;

@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC1632B31BF24C830008D14D /* LLMaskMatrices.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC1632B21BF24C830008D14D /* LLMaskMatrices.mm */; };
 		EC33C9671B2C3C82003A3FEE /* LLVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC33C9661B2C3C81003A3FEE /* LLVideoCameraViewController.m */; };
-		EC33C96A1B2C7456003A3FEE /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = EC33C9691B2C7456003A3FEE /* UIImage+Util.m */; };
-		EC60CA0B1A67DF8800FAE7DC /* UIImage+Convolves.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC60CA0A1A67DF8800FAE7DC /* UIImage+Convolves.mm */; };
 		EC6B5ED31A3FE0410051AEBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5ED21A3FE0410051AEBC /* Foundation.framework */; };
 		EC6B5ED51A3FE0410051AEBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5ED41A3FE0410051AEBC /* CoreGraphics.framework */; };
 		EC6B5ED71A3FE0410051AEBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5ED61A3FE0410051AEBC /* UIKit.framework */; };
 		EC6B5EDD1A3FE0410051AEBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5EDB1A3FE0410051AEBC /* InfoPlist.strings */; };
 		EC6B5EDF1A3FE0410051AEBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5EDE1A3FE0410051AEBC /* main.m */; };
 		EC6B5EE31A3FE0410051AEBC /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5EE21A3FE0410051AEBC /* LLAppDelegate.m */; };
-		EC6B5EE91A3FE0410051AEBC /* LLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5EE81A3FE0410051AEBC /* LLViewController.mm */; };
 		EC6B5EEB1A3FE0410051AEBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5EEA1A3FE0410051AEBC /* Images.xcassets */; };
 		EC6B5EF21A3FE0410051AEBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5EF11A3FE0410051AEBC /* XCTest.framework */; };
 		EC6B5EF31A3FE0410051AEBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B5ED21A3FE0410051AEBC /* Foundation.framework */; };
@@ -40,13 +38,16 @@
 		ECD4DF071B496CDB00F82124 /* LLPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD4DF011B496CDB00F82124 /* LLPhotoModel.m */; };
 		ECD4DF081B496CDB00F82124 /* LLPhotosStore.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD4DF031B496CDB00F82124 /* LLPhotosStore.m */; };
 		ECD4DF091B496CDB00F82124 /* LLPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD4DF051B496CDB00F82124 /* LLPhotosViewController.m */; };
-		ECD9D6A41B6A6CC700D1FB74 /* LLPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD9D6A31B6A6CC700D1FB74 /* LLPhotoViewController.m */; };
 		ECE61B7F1A68B56F0025ADAF /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B7E1A68B56F0025ADAF /* example.png */; };
 		ECE61B811A68F9200025ADAF /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B801A68F9200025ADAF /* example.jpg */; };
 		ECE61B871A68FD8B0025ADAF /* UIImage+CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */; };
 		ECE61B8A1A68FDA50025ADAF /* UIImage+CVBlend.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECE61B891A68FDA50025ADAF /* UIImage+CVBlend.mm */; };
 		ECE61B8D1A6913220025ADAF /* imageName1.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B8B1A6913220025ADAF /* imageName1.png */; };
 		ECE61B8E1A6913220025ADAF /* imageName2.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B8C1A6913220025ADAF /* imageName2.png */; };
+		ECEFB82D1C147B9D0027FBEA /* LLFilterResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB8281C147B9D0027FBEA /* LLFilterResultViewController.m */; };
+		ECEFB82E1C147B9D0027FBEA /* LLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB82A1C147B9D0027FBEA /* LLViewController.mm */; };
+		ECEFB82F1C147B9D0027FBEA /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB82C1C147B9D0027FBEA /* UIImage+Util.m */; };
+		ECEFB8321C147ECD0027FBEA /* LLBlend.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB8311C147ECD0027FBEA /* LLBlend.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,12 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC1632B11BF24C830008D14D /* LLMaskMatrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMaskMatrices.h; sourceTree = "<group>"; };
+		EC1632B21BF24C830008D14D /* LLMaskMatrices.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LLMaskMatrices.mm; sourceTree = "<group>"; };
 		EC33C9651B2C3C81003A3FEE /* LLVideoCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLVideoCameraViewController.h; sourceTree = "<group>"; };
 		EC33C9661B2C3C81003A3FEE /* LLVideoCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLVideoCameraViewController.m; sourceTree = "<group>"; };
-		EC33C9681B2C7456003A3FEE /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Util.h"; path = "HelloOpenCV/UIImage+Util.h"; sourceTree = SOURCE_ROOT; };
-		EC33C9691B2C7456003A3FEE /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Util.m"; path = "HelloOpenCV/UIImage+Util.m"; sourceTree = SOURCE_ROOT; };
-		EC60CA091A67DF8800FAE7DC /* UIImage+Convolves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convolves.h"; sourceTree = "<group>"; };
-		EC60CA0A1A67DF8800FAE7DC /* UIImage+Convolves.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+Convolves.mm"; sourceTree = "<group>"; };
 		EC6B5ECF1A3FE0410051AEBC /* HelloOpenCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloOpenCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6B5ED21A3FE0410051AEBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC6B5ED41A3FE0410051AEBC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,8 +75,6 @@
 		EC6B5EE01A3FE0410051AEBC /* HelloOpenCV-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloOpenCV-Prefix.pch"; sourceTree = "<group>"; };
 		EC6B5EE11A3FE0410051AEBC /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
 		EC6B5EE21A3FE0410051AEBC /* LLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAppDelegate.m; sourceTree = "<group>"; };
-		EC6B5EE71A3FE0410051AEBC /* LLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
-		EC6B5EE81A3FE0410051AEBC /* LLViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LLViewController.mm; sourceTree = "<group>"; };
 		EC6B5EEA1A3FE0410051AEBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC6B5EF01A3FE0410051AEBC /* HelloOpenCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloOpenCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6B5EF11A3FE0410051AEBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,9 +112,6 @@
 		ECD4DF031B496CDB00F82124 /* LLPhotosStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPhotosStore.m; sourceTree = "<group>"; };
 		ECD4DF041B496CDB00F82124 /* LLPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPhotosViewController.h; sourceTree = "<group>"; };
 		ECD4DF051B496CDB00F82124 /* LLPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPhotosViewController.m; sourceTree = "<group>"; };
-		ECD9D6A21B6A6CC700D1FB74 /* LLPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPhotoViewController.h; sourceTree = "<group>"; };
-		ECD9D6A31B6A6CC700D1FB74 /* LLPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPhotoViewController.m; sourceTree = "<group>"; };
-		ECD9D6A51B6A7DEC00D1FB74 /* LLPhotoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPhotoFilter.h; sourceTree = "<group>"; };
 		ECE61B7E1A68B56F0025ADAF /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
 		ECE61B801A68F9200025ADAF /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		ECE61B851A68FD8B0025ADAF /* UIImage+CVMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CVMat.h"; sourceTree = "<group>"; };
@@ -126,6 +120,14 @@
 		ECE61B891A68FDA50025ADAF /* UIImage+CVBlend.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+CVBlend.mm"; sourceTree = "<group>"; };
 		ECE61B8B1A6913220025ADAF /* imageName1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageName1.png; sourceTree = "<group>"; };
 		ECE61B8C1A6913220025ADAF /* imageName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageName2.png; sourceTree = "<group>"; };
+		ECEFB8271C147B9D0027FBEA /* LLFilterResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLFilterResultViewController.h; sourceTree = "<group>"; };
+		ECEFB8281C147B9D0027FBEA /* LLFilterResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLFilterResultViewController.m; sourceTree = "<group>"; };
+		ECEFB8291C147B9D0027FBEA /* LLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
+		ECEFB82A1C147B9D0027FBEA /* LLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LLViewController.mm; sourceTree = "<group>"; };
+		ECEFB82B1C147B9D0027FBEA /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
+		ECEFB82C1C147B9D0027FBEA /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
+		ECEFB8301C147ECD0027FBEA /* LLBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBlend.h; sourceTree = "<group>"; };
+		ECEFB8311C147ECD0027FBEA /* LLBlend.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LLBlend.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,12 +163,12 @@
 			children = (
 				ECE61B851A68FD8B0025ADAF /* UIImage+CVMat.h */,
 				ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */,
-				EC60CA091A67DF8800FAE7DC /* UIImage+Convolves.h */,
-				EC60CA0A1A67DF8800FAE7DC /* UIImage+Convolves.mm */,
 				ECE61B881A68FDA50025ADAF /* UIImage+CVBlend.h */,
 				ECE61B891A68FDA50025ADAF /* UIImage+CVBlend.mm */,
-				EC33C9681B2C7456003A3FEE /* UIImage+Util.h */,
-				EC33C9691B2C7456003A3FEE /* UIImage+Util.m */,
+				EC1632B11BF24C830008D14D /* LLMaskMatrices.h */,
+				EC1632B21BF24C830008D14D /* LLMaskMatrices.mm */,
+				ECEFB8301C147ECD0027FBEA /* LLBlend.h */,
+				ECEFB8311C147ECD0027FBEA /* LLBlend.mm */,
 			);
 			path = OpenCVExamples;
 			sourceTree = "<group>";
@@ -219,8 +221,6 @@
 				EC33C9661B2C3C81003A3FEE /* LLVideoCameraViewController.m */,
 				EC6B5EE11A3FE0410051AEBC /* LLAppDelegate.h */,
 				EC6B5EE21A3FE0410051AEBC /* LLAppDelegate.m */,
-				EC6B5EE71A3FE0410051AEBC /* LLViewController.h */,
-				EC6B5EE81A3FE0410051AEBC /* LLViewController.mm */,
 				EC6B5EEA1A3FE0410051AEBC /* Images.xcassets */,
 				EC6B5ED91A3FE0410051AEBC /* Supporting Files */,
 			);
@@ -306,6 +306,12 @@
 		ECD4DEFD1B496CDB00F82124 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				ECEFB8271C147B9D0027FBEA /* LLFilterResultViewController.h */,
+				ECEFB8281C147B9D0027FBEA /* LLFilterResultViewController.m */,
+				ECEFB8291C147B9D0027FBEA /* LLViewController.h */,
+				ECEFB82A1C147B9D0027FBEA /* LLViewController.mm */,
+				ECEFB82B1C147B9D0027FBEA /* UIImage+Util.h */,
+				ECEFB82C1C147B9D0027FBEA /* UIImage+Util.m */,
 				ECD4DEFE1B496CDB00F82124 /* LLPhotoCell.h */,
 				ECD4DEFF1B496CDB00F82124 /* LLPhotoCell.m */,
 				ECD4DF001B496CDB00F82124 /* LLPhotoModel.h */,
@@ -314,9 +320,6 @@
 				ECD4DF031B496CDB00F82124 /* LLPhotosStore.m */,
 				ECD4DF041B496CDB00F82124 /* LLPhotosViewController.h */,
 				ECD4DF051B496CDB00F82124 /* LLPhotosViewController.m */,
-				ECD9D6A21B6A6CC700D1FB74 /* LLPhotoViewController.h */,
-				ECD9D6A31B6A6CC700D1FB74 /* LLPhotoViewController.m */,
-				ECD9D6A51B6A7DEC00D1FB74 /* LLPhotoFilter.h */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -439,21 +442,22 @@
 				EC6B5EE31A3FE0410051AEBC /* LLAppDelegate.m in Sources */,
 				EC6B5F371A4012BA0051AEBC /* utils.c in Sources */,
 				ECC1269A1B8A00CE00FC1218 /* LLNavigationBar.m in Sources */,
-				EC60CA0B1A67DF8800FAE7DC /* UIImage+Convolves.mm in Sources */,
-				EC33C96A1B2C7456003A3FEE /* UIImage+Util.m in Sources */,
+				ECEFB82D1C147B9D0027FBEA /* LLFilterResultViewController.m in Sources */,
+				ECEFB82F1C147B9D0027FBEA /* UIImage+Util.m in Sources */,
+				EC1632B31BF24C830008D14D /* LLMaskMatrices.mm in Sources */,
 				ECD4DF091B496CDB00F82124 /* LLPhotosViewController.m in Sources */,
 				EC6B5EDF1A3FE0410051AEBC /* main.m in Sources */,
 				EC6B5F361A4012BA0051AEBC /* sift.c in Sources */,
-				ECD9D6A41B6A6CC700D1FB74 /* LLPhotoViewController.m in Sources */,
 				EC6B5F461A41725A0051AEBC /* wote.cpp in Sources */,
 				EC6B5F331A4012BA0051AEBC /* imgfeatures.c in Sources */,
 				EC33C9671B2C3C82003A3FEE /* LLVideoCameraViewController.m in Sources */,
 				ECE61B8A1A68FDA50025ADAF /* UIImage+CVBlend.mm in Sources */,
 				EC6B5F351A4012BA0051AEBC /* minpq.c in Sources */,
-				EC6B5EE91A3FE0410051AEBC /* LLViewController.mm in Sources */,
+				ECEFB8321C147ECD0027FBEA /* LLBlend.mm in Sources */,
 				EC6B5F341A4012BA0051AEBC /* kdtree.c in Sources */,
 				ECD4DF081B496CDB00F82124 /* LLPhotosStore.m in Sources */,
 				EC6B5F3E1A4031060051AEBC /* OpenSift.m in Sources */,
+				ECEFB82E1C147B9D0027FBEA /* LLViewController.mm in Sources */,
 				ECE61B871A68FD8B0025ADAF /* UIImage+CVMat.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

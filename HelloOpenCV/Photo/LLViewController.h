@@ -10,6 +10,6 @@
 
 @interface LLViewController : UITableViewController
 
-- (instancetype)initWithImage:(UIImage *)image;
+- (instancetype)initWithImages:(NSArray *)images;
 
 @end

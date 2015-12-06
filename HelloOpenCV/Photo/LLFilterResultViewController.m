@@ -1,14 +1,14 @@
 //
-//  LLPhotoViewController.m
+//  LLFilterResultViewController.m
 //  HelloOpenCV
 //
-//  Created by liang on 7/30/15.
+//  Created by liang on 12/6/15.
 //  Copyright (c) 2015 Tina. All rights reserved.
 //
 
-#import "LLPhotoViewController.h"
+#import "LLFilterResultViewController.h"
 
-@interface LLPhotoViewController ()
+@interface LLFilterResultViewController ()
 {
     UIImage *_filterImage;
     UIImageView *_filterImageView;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation LLPhotoViewController
+@implementation LLFilterResultViewController
 
 - (instancetype)initWithFilterImage:(UIImage *)filterImage andOriginImage:(UIImage *)originImage
 {

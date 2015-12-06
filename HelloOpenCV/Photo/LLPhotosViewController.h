@@ -7,14 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LLPhotoFilter.h"
 
 @interface LLPhotosViewController : UIViewController
 
 @property (nonatomic, assign) NSInteger imageCountOfFilter;
-
-- (instancetype)initWithFilterImageBlock:(FilterImageBlock)filterImageBlock;
-
-- (instancetype)initWithPhotoFilter:(id<LLPhotoFilter>)filter;
 
 @end

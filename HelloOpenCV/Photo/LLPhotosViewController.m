@@ -6,13 +6,15 @@
 //  Copyright (c) 2015 Tina. All rights reserved.
 //
 
+#import "UIImage+Util.h"
+
+#import "LLViewController.h"
+
 #import "LLPhotosViewController.h"
 #import "LLPhotosStore.h"
 #import "LLPhotoModel.h"
 #import "LLPhotoCell.h"
-#import "UIImage+Util.h"
 
-#import "LLPhotoViewController.h"
 
 @interface LLPhotosViewController ()<
   UICollectionViewDataSource,
@@ -21,28 +23,10 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) LLPhotosStore *photosStore;
 
-@property (nonatomic, copy) FilterImageBlock filterImageBlock;
-@property (nonatomic, copy) id<LLPhotoFilter> photoFilter;
 
 @end
 
 @implementation LLPhotosViewController
-
-- (instancetype)initWithFilterImageBlock:(FilterImageBlock)filterImageBlock {
-    self = [super init];
-    if (self) {
-        _filterImageBlock = filterImageBlock;
-    }
-    return self;
-}
-
-- (instancetype)initWithPhotoFilter:(id<LLPhotoFilter>)photoFilter {
-    self = [super init];
-    if (self) {
-        _photoFilter = photoFilter;
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -137,19 +121,8 @@
         originImage = image;
     }
     
-    UIImage *filterImage;
-    if (self.filterImageBlock) {
-        if (self.imageCountOfFilter <= images.count) {
-            filterImage = self.filterImageBlock(images);
-        }
-    } else if (self.photoFilter) {
-        if ([self.photoFilter imageCountOfFilter] <= images.count) {
-            filterImage = [self.photoFilter filterImage:images];
-        }
-    }
-    
-    if (filterImage) {
-        LLPhotoViewController *viewController = [[LLPhotoViewController alloc] initWithFilterImage:filterImage andOriginImage:originImage];
+    if (images.count) {
+        LLViewController *viewController = [[LLViewController alloc] initWithImages:images];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

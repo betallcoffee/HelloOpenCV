@@ -1,35 +1,21 @@
 //
-//  UIImage+CVBlend.m
+//  LLBlend.m
 //  HelloOpenCV
 //
-//  Created by liang on 1/16/15.
+//  Created by liang on 12/6/15.
 //  Copyright (c) 2015 Tina. All rights reserved.
-// http://docs.opencv.org/doc/tutorials/core/adding_images/adding_images.html#adding-images
-
-#import "UIImage+Util.h"
-#import "UIImage+CVBlend.h"
-#import "UIImage+CVMat.h"
+//  http://docs.opencv.org/doc/tutorials/core/adding_images/adding_images.html#adding-images
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-@implementation UIImage (CVBlend)
+#import "UIImage+Util.h"
+#import "UIImage+CVMat.h"
 
-+ (NSNumber *)blendImageCount {
-    return @(2);
-}
-//
-//+ (FilterImageBlock)blendImageBlock {
-//    return [^UIImage* (NSArray *images) {
-//        if (images.count > 1) {
-//            return [UIImage imageBlendImage:[images[0] scaleToSize:CGSizeMake(640, 1280)]
-//                                   andImage:[images[1] scaleToSize:CGSizeMake(640, 1280)]
-//                                   withBeta:0.5];
-//        } else {
-//            return nil;
-//        }
-//    } copy];
-//}
+#import "LLBlend.h"
+
+@implementation LLBlend
+
 
 + (UIImage *)imageBlend:(NSString *)imageName1 andImage:(NSString *)imageName2 withBeta:(float)beta {
     assert(beta < 1);
