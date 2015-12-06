@@ -9,6 +9,7 @@
 #import "UIImage+Util.h"
 #import "LLMaskMatrices.h"
 #import "LLBlend.h"
+#import "LLContrastBrightness.h"
 
 #import "LLViewController.h"
 #import "LLFilterResultViewController.h"
@@ -62,6 +63,9 @@
                     break;
                 case 2:
                     [self filter2D];
+                    break;
+                case 3:
+                    [self contrastBrightness];
                     break;
                 default:
                     break;
@@ -120,13 +124,22 @@
     }
 }
 
+- (void)contrastBrightness
+{
+    if (self.images.count > 0) {
+        UIImage *originImage = self.images[0];
+        self.resultImage = [LLContrastBrightness contrastBrightness:originImage alpha:2.2 beta:50];
+    }
+}
+
 #pragma mark setter/getter
 
 - (NSArray *)titles {
     if (_titles == nil) {
         _titles = @[@"CVBlend",
                     @"ContrastEnhancement",
-                    @"Filter2D"];
+                    @"Filter2D",
+                    @"ContrastBrightness"];
     }
     return _titles;
 }

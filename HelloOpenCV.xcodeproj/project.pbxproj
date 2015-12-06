@@ -47,6 +47,7 @@
 		ECEFB82E1C147B9D0027FBEA /* LLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB82A1C147B9D0027FBEA /* LLViewController.mm */; };
 		ECEFB82F1C147B9D0027FBEA /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB82C1C147B9D0027FBEA /* UIImage+Util.m */; };
 		ECEFB8321C147ECD0027FBEA /* LLBlend.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB8311C147ECD0027FBEA /* LLBlend.mm */; };
+		ECEFB8351C148B5B0027FBEA /* LLContrastBrightness.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB8341C148B5B0027FBEA /* LLContrastBrightness.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,8 @@
 		ECEFB82C1C147B9D0027FBEA /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 		ECEFB8301C147ECD0027FBEA /* LLBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBlend.h; sourceTree = "<group>"; };
 		ECEFB8311C147ECD0027FBEA /* LLBlend.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LLBlend.mm; sourceTree = "<group>"; };
+		ECEFB8331C148B5B0027FBEA /* LLContrastBrightness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLContrastBrightness.h; sourceTree = "<group>"; };
+		ECEFB8341C148B5B0027FBEA /* LLContrastBrightness.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LLContrastBrightness.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				EC1632B21BF24C830008D14D /* LLMaskMatrices.mm */,
 				ECEFB8301C147ECD0027FBEA /* LLBlend.h */,
 				ECEFB8311C147ECD0027FBEA /* LLBlend.mm */,
+				ECEFB8331C148B5B0027FBEA /* LLContrastBrightness.h */,
+				ECEFB8341C148B5B0027FBEA /* LLContrastBrightness.mm */,
 			);
 			path = OpenCVExamples;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				ECD4DF061B496CDB00F82124 /* LLPhotoCell.m in Sources */,
 				EC6B5F381A4012BA0051AEBC /* xform.c in Sources */,
 				ECD4DF071B496CDB00F82124 /* LLPhotoModel.m in Sources */,
+				ECEFB8351C148B5B0027FBEA /* LLContrastBrightness.mm in Sources */,
 				EC6B5EE31A3FE0410051AEBC /* LLAppDelegate.m in Sources */,
 				EC6B5F371A4012BA0051AEBC /* utils.c in Sources */,
 				ECC1269A1B8A00CE00FC1218 /* LLNavigationBar.m in Sources */,
