@@ -41,7 +41,6 @@
 		ECE61B7F1A68B56F0025ADAF /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B7E1A68B56F0025ADAF /* example.png */; };
 		ECE61B811A68F9200025ADAF /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B801A68F9200025ADAF /* example.jpg */; };
 		ECE61B871A68FD8B0025ADAF /* UIImage+CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */; };
-		ECE61B8A1A68FDA50025ADAF /* UIImage+CVBlend.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECE61B891A68FDA50025ADAF /* UIImage+CVBlend.mm */; };
 		ECE61B8D1A6913220025ADAF /* imageName1.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B8B1A6913220025ADAF /* imageName1.png */; };
 		ECE61B8E1A6913220025ADAF /* imageName2.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B8C1A6913220025ADAF /* imageName2.png */; };
 		ECEFB82D1C147B9D0027FBEA /* LLFilterResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB8281C147B9D0027FBEA /* LLFilterResultViewController.m */; };
@@ -116,8 +115,6 @@
 		ECE61B801A68F9200025ADAF /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		ECE61B851A68FD8B0025ADAF /* UIImage+CVMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CVMat.h"; sourceTree = "<group>"; };
 		ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+CVMat.mm"; sourceTree = "<group>"; };
-		ECE61B881A68FDA50025ADAF /* UIImage+CVBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CVBlend.h"; sourceTree = "<group>"; };
-		ECE61B891A68FDA50025ADAF /* UIImage+CVBlend.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+CVBlend.mm"; sourceTree = "<group>"; };
 		ECE61B8B1A6913220025ADAF /* imageName1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageName1.png; sourceTree = "<group>"; };
 		ECE61B8C1A6913220025ADAF /* imageName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageName2.png; sourceTree = "<group>"; };
 		ECEFB8271C147B9D0027FBEA /* LLFilterResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLFilterResultViewController.h; sourceTree = "<group>"; };
@@ -163,8 +160,6 @@
 			children = (
 				ECE61B851A68FD8B0025ADAF /* UIImage+CVMat.h */,
 				ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */,
-				ECE61B881A68FDA50025ADAF /* UIImage+CVBlend.h */,
-				ECE61B891A68FDA50025ADAF /* UIImage+CVBlend.mm */,
 				EC1632B11BF24C830008D14D /* LLMaskMatrices.h */,
 				EC1632B21BF24C830008D14D /* LLMaskMatrices.mm */,
 				ECEFB8301C147ECD0027FBEA /* LLBlend.h */,
@@ -451,7 +446,6 @@
 				EC6B5F461A41725A0051AEBC /* wote.cpp in Sources */,
 				EC6B5F331A4012BA0051AEBC /* imgfeatures.c in Sources */,
 				EC33C9671B2C3C82003A3FEE /* LLVideoCameraViewController.m in Sources */,
-				ECE61B8A1A68FDA50025ADAF /* UIImage+CVBlend.mm in Sources */,
 				EC6B5F351A4012BA0051AEBC /* minpq.c in Sources */,
 				ECEFB8321C147ECD0027FBEA /* LLBlend.mm in Sources */,
 				EC6B5F341A4012BA0051AEBC /* kdtree.c in Sources */,

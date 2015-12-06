@@ -18,7 +18,8 @@
     cv::Mat cvMat = [image CVMatFromImage];
 
     CV_Assert(cvMat.depth() == CV_8U);
-    cv::Mat imageMask(cvMat.size(), cvMat.type());
+    cv::Mat imageMask;
+    imageMask.create(cvMat.size(), cvMat.type());
     const int nChannels = cvMat.channels();
     
     for (int j = 1; j < cvMat.rows - 1; j++) {
@@ -28,7 +29,8 @@
         
         uchar *out = imageMask.ptr<uchar>(j);
         for (int i = nChannels; i < nChannels * (cvMat.cols - 1); i++) {
-            *out = cv::saturate_cast<uchar>(5 * cur[i]-cur[i - nChannels] - cur[i + nChannels] - pre[i] - next[i]);
+            *out = cv::saturate_cast<uchar>(5 * cur[i] - cur[i - nChannels] - cur[i + nChannels] - pre[i] - next[i]);
+            out++;
         }
     }
     
@@ -37,7 +39,7 @@
     imageMask.col(0).setTo(cv::Scalar(0));
     imageMask.col(imageMask.cols - 1).setTo(cv::Scalar(0));
     
-    return [UIImage imageWithCVMat:cvMat];
+    return [UIImage imageWithCVMat:imageMask];
 }
 
 + (UIImage *)filter2DWithImage:(UIImage *)image
