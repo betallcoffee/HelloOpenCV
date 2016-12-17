@@ -43,6 +43,7 @@
 		ECE61B871A68FD8B0025ADAF /* UIImage+CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */; };
 		ECE61B8D1A6913220025ADAF /* imageName1.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B8B1A6913220025ADAF /* imageName1.png */; };
 		ECE61B8E1A6913220025ADAF /* imageName2.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE61B8C1A6913220025ADAF /* imageName2.png */; };
+		ECEE65111E053FF2008C5A9A /* LLBaseDrawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECEE650F1E053FF2008C5A9A /* LLBaseDrawing.cpp */; };
 		ECEFB82D1C147B9D0027FBEA /* LLFilterResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB8281C147B9D0027FBEA /* LLFilterResultViewController.m */; };
 		ECEFB82E1C147B9D0027FBEA /* LLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB82A1C147B9D0027FBEA /* LLViewController.mm */; };
 		ECEFB82F1C147B9D0027FBEA /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEFB82C1C147B9D0027FBEA /* UIImage+Util.m */; };
@@ -118,6 +119,8 @@
 		ECE61B861A68FD8B0025ADAF /* UIImage+CVMat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+CVMat.mm"; sourceTree = "<group>"; };
 		ECE61B8B1A6913220025ADAF /* imageName1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageName1.png; sourceTree = "<group>"; };
 		ECE61B8C1A6913220025ADAF /* imageName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageName2.png; sourceTree = "<group>"; };
+		ECEE650F1E053FF2008C5A9A /* LLBaseDrawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LLBaseDrawing.cpp; sourceTree = "<group>"; };
+		ECEE65101E053FF2008C5A9A /* LLBaseDrawing.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LLBaseDrawing.hpp; sourceTree = "<group>"; };
 		ECEFB8271C147B9D0027FBEA /* LLFilterResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLFilterResultViewController.h; sourceTree = "<group>"; };
 		ECEFB8281C147B9D0027FBEA /* LLFilterResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLFilterResultViewController.m; sourceTree = "<group>"; };
 		ECEFB8291C147B9D0027FBEA /* LLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				ECEFB8311C147ECD0027FBEA /* LLBlend.mm */,
 				ECEFB8331C148B5B0027FBEA /* LLContrastBrightness.h */,
 				ECEFB8341C148B5B0027FBEA /* LLContrastBrightness.mm */,
+				ECEE650F1E053FF2008C5A9A /* LLBaseDrawing.cpp */,
+				ECEE65101E053FF2008C5A9A /* LLBaseDrawing.hpp */,
 			);
 			path = OpenCVExamples;
 			sourceTree = "<group>";
@@ -383,6 +388,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Tina;
 				TargetAttributes = {
+					EC6B5ECE1A3FE0410051AEBC = {
+						DevelopmentTeam = K9PLWZ4X6K;
+					};
 					EC6B5EEF1A3FE0410051AEBC = {
 						TestTargetID = EC6B5ECE1A3FE0410051AEBC;
 					};
@@ -453,6 +461,7 @@
 				EC6B5F331A4012BA0051AEBC /* imgfeatures.c in Sources */,
 				EC33C9671B2C3C82003A3FEE /* LLVideoCameraViewController.m in Sources */,
 				EC6B5F351A4012BA0051AEBC /* minpq.c in Sources */,
+				ECEE65111E053FF2008C5A9A /* LLBaseDrawing.cpp in Sources */,
 				ECEFB8321C147ECD0027FBEA /* LLBlend.mm in Sources */,
 				EC6B5F341A4012BA0051AEBC /* kdtree.c in Sources */,
 				ECD4DF081B496CDB00F82124 /* LLPhotosStore.m in Sources */,
@@ -532,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -564,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -574,7 +583,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/liang/Workspace/opensource/opencv-2.4.10/platforms/ios/framework",
@@ -582,7 +592,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloOpenCV/HelloOpenCV-Prefix.pch";
 				INFOPLIST_FILE = "HelloOpenCV/HelloOpenCV-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tina.OpenCVExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -592,7 +604,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/liang/Workspace/opensource/opencv-2.4.10/platforms/ios/framework",
@@ -600,7 +613,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloOpenCV/HelloOpenCV-Prefix.pch";
 				INFOPLIST_FILE = "HelloOpenCV/HelloOpenCV-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tina.OpenCVExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

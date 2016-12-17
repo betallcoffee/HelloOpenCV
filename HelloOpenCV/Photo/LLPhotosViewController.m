@@ -64,16 +64,6 @@
 }
 */
 
-#pragma mark UIScrollViewDelegate
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
-
-- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
 #pragma mark UICollectionViewDataSource
 
 

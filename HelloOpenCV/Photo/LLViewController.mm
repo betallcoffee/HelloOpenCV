@@ -7,9 +7,11 @@
 //
 
 #import "UIImage+Util.h"
+#import "UIImage+CVMat.h"
 #import "LLMaskMatrices.h"
 #import "LLBlend.h"
 #import "LLContrastBrightness.h"
+#include "LLBaseDrawing.hpp"
 
 #import "LLViewController.h"
 #import "LLFilterResultViewController.h"
@@ -66,6 +68,12 @@
                     break;
                 case 3:
                     [self contrastBrightness];
+                    break;
+                case 4:
+                    [self baseDrawAtom];
+                    break;
+                case 5:
+                    [self baseDrawRook];
                     break;
                 default:
                     break;
@@ -132,6 +140,22 @@
     }
 }
 
+- (void)baseDrawAtom
+{
+    int w = 400;
+    cv::Mat cvMat = cv::Mat::zeros( w, w, CV_8UC3 );
+    LL::BaseDrawing::drawAtom(cvMat);
+    self.resultImage = [UIImage imageWithCVMat:cvMat];
+}
+
+- (void)baseDrawRook
+{
+    int w = 400;
+    cv::Mat cvMat = cv::Mat::zeros(w, w, CV_8UC3);
+    LL::BaseDrawing::drawRook(cvMat);
+    self.resultImage = [UIImage imageWithCVMat:cvMat];
+}
+
 #pragma mark setter/getter
 
 - (NSArray *)titles {
@@ -139,7 +163,9 @@
         _titles = @[@"CVBlend",
                     @"ContrastEnhancement",
                     @"Filter2D",
-                    @"ContrastBrightness"];
+                    @"ContrastBrightness",
+                    @"BaseDrawAtom",
+                    @"BaseDrawRook"];
     }
     return _titles;
 }
